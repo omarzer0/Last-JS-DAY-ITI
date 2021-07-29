@@ -1,0 +1,98 @@
+<html>
+  <head>
+    <title></title>
+    <script src="index.js"></script>
+
+    <style>
+      body {
+        font-size: larger;
+      }
+      #organize tr td:first-child {
+        background-color: antiquewhite;
+        color: blue;
+        font-family: "Monotype Corsiva";
+      }
+      table:nth-child(2) td,
+      table:nth-child(2) th {
+        border: solid rgb(241, 17, 129) 1px;
+      }
+    </style>
+    <script src="studentsForm.js"></script>
+  </head>
+  <body>
+    <form>
+      <table id="organize">
+        <tbody>
+          <tr>
+            <td>name</td>
+            <td>
+              <input type="text" name="nameTxt" />
+
+              <span id="nameError" style="color: red; visibility: hidden">
+                name is required
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td>age</td>
+            <td>
+              <input type="text" name="ageTxt" /><span
+                id="ageError"
+                style="color: red; visibility: hidden"
+              >
+                number 25:50</span
+              >
+            </td>
+          </tr>
+
+          <tr>
+            <td>salary</td>
+            <td><input type="text" name="gradeTxt" /></td>
+
+            <td>
+              <span id="salaryError" style="color: red; visibility: hidden">
+                must not be empty
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <select name="deptVal">
+                <option>SD</option>
+                <option>OS</option>
+                <option>EL</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="button" value="add Employee" id="btn" />
+            </td>
+          </tr>
+          <tr>
+            <td>Sort</td>
+            <td>
+              <select name="sort" class="sort">
+                <option value="acs">ACS</option>
+                <option value="desc">DESC</option>
+              </select>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Filter</td>
+            <td>
+              <select name="filter" class="filter">
+                <option value="-1">younger than 35</option>
+                <option value="1">older than or equal 35</option>
+              </select>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+
+    <table id="stdTable"></table>
+    <label id="lbl1"></label>
+  </body>
+</html>
